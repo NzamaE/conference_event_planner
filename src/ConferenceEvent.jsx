@@ -3,6 +3,9 @@ import "./ConferenceEvent.css";
 import TotalCost from "./TotalCost";
 import { useSelector, useDispatch } from "react-redux";
 import { incrementQuantity, decrementQuantity } from "./venueSlice";
+
+
+
 const ConferenceEvent = () => {
     const [showItems, setShowItems] = useState(false);
     const [numberOfPeople, setNumberOfPeople] = useState(1);
@@ -47,6 +50,7 @@ const ConferenceEvent = () => {
     const ItemsDisplay = ({ items }) => {
 
     };
+    
     const calculateTotalCost = (section) => {
         let totalCost = 0;
         if (section === "venue") {
