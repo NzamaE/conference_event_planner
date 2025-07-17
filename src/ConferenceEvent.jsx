@@ -9,11 +9,16 @@ import { incrementQuantity, decrementQuantity } from "./venueSlice";
 const ConferenceEvent = () => {
     const [showItems, setShowItems] = useState(false);
     const [numberOfPeople, setNumberOfPeople] = useState(1);
+
+    const avItems = useSelector((state) => state.av); 
     const venueItems = useSelector((state) => state.venue);
     const dispatch = useDispatch();
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
 
-    
+
+
+
+
     const handleToggleItems = () => {
         console.log("handleToggleItems called");
         setShowItems(!showItems);
